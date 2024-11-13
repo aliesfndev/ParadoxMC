@@ -15,7 +15,7 @@ Welcome to **Paradox** – an innovative server software designed for Minecraft:
 
 ### Step 1: Download Paradox Server
 
-1. Download the latest version of **Paradox Server** [here](https://your-download-link.com) (replace with actual link).
+1. Download the latest version of **Paradox Server** [here](https://github.com/aliesfndev/ParadoxMC/releases/).
 2. Extract the files to a folder of your choice.
 
 ### Step 2: Adding Plugins
