@@ -7,7 +7,7 @@ Welcome to **Paradox** – an innovative server software designed for Minecraft:
 ## Features
 
 - **Custom Plugins**: Easily add plugins for a variety of features, including custom game modes, anti-cheat, and more.
-- **Ongoing Development**: We are actively working to create new plugins to expand functionality, so stay tuned for updates.
+- **AntiLag**: We have a built-in antilag system. (Say goodbye to TPS Drops) 
 
 ---
 
@@ -21,12 +21,12 @@ Welcome to **Paradox** – an innovative server software designed for Minecraft:
 ### Step 2: Adding Plugins
 
 1. Go to the `plugins` folder within the Paradox Server directory.
-2. Add your plugin file (in `.mcpack` format) to this folder.
+2. Add your plugin to this folder.
 
 ### Step 3: Activating Plugins
 
-1. Make sure your plugin files are in `.mcpack` format.
-2. Add them to your Minecraft world and activate them through your server settings.
+1. Compress the folder and turn the file to a `.mcpack` format.
+2. Add them to your Minecraft world and activate them through your worlds behavior packs.
 
 ---
 
@@ -45,11 +45,3 @@ Paradox is an open-source project, and we welcome contributions! Feel free to cr
 We are actively developing new plugins and enhancing existing features. Keep an eye on our updates to see what's next!
 
 ---
-
-## Contact
-
-For support or questions, please reach out to us via our [Discord server](https://your-discord-link.com) or [email](mailto:support@paradoxserversoftware.com).
-
----
-
-Enjoy a seamless and customizable Bedrock server experience with **Paradox**!
