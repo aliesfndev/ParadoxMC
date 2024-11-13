@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Page Button Layout</title>
+    <style>
+        /* Basic styling */
+        body {
+            margin: 0;
+            font-family: 'Lucida Console', monospace;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: black;
+            color: white;
+            overflow: hidden;
+        }
+
+        /* Background animation */
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(120deg, #1a1a1a, #000);
+            background-size: 400% 400%;
+            animation: gradientShift 10s ease infinite;
+            z-index: -1;
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Container for buttons */
+        .page {
+            display: grid;
+            grid-template-columns: repeat(5, 200px);
+            gap: 20px;
+            transition: opacity 0.5s ease;
+        }
+
+        .button {
+            width: 200px;
+            height: 100px;
+            font-size: 20px;
+            color: white;
+            background-color: black;
+            border: 1px solid white;
+            border-radius: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        /* Hover effect for buttons */
+        .button:hover {
+            color: #1a1a1a;
+            background-color: white;
+        }
+
+        /* Circular navigation button */
+        .nav-button {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            width: 60px;
+            height: 60px;
+            font-size: 20px;
+            color: white;
+            background-color: #1a1a1a;
+            border: 2px solid white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .nav-button:hover {
+            background-color: white;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <!-- Page 1 -->
+    <div id="page1" class="page">
+        <div class="button">Paradox UHC</div>
+        <div class="button">Paradox Server</div>
+        <div class="button">Coming soon!</div>
+        <div class="button">Coming soon!</div>
+        <div class="button">Coming soon!</div>
+        <div class="button">Coming soon!</div>
+        <div class="button">Coming soon!</div>
+        <div class="button">Coming soon!</div>
+        <div class="button">Coming soon!</div>
+        <div class="button">Coming soon!</div>
+    </div>
+
+    <!-- Page 2 -->
+    <div id="page2" class="page" style="display: none;">
+        <div class="button">Coming soon!</div>
+        <div class="button">Coming soon!</div>
+        <div class="button">Coming soon!</div>
+        <div class="button">Coming soon!</div>
+        <div class="button">Coming soon!</div>
+        <div class="button">Coming soon!</div>
+        <div class="button">Coming soon!</div>
+        <div class="button">Coming soon!</div>
+        <div class="button">Coming soon!</div>
+        <div class="button">Coming soon!</div>
+    </div>
+
+    <!-- Navigation button -->
+    <div class="nav-button" onclick="togglePage()">⇆</div>
+
+    <script>
+        let currentPage = 1;
+
+        function togglePage() {
+            const page1 = document.getElementById('page1');
+            const page2 = document.getElementById('page2');
+
+            if (currentPage === 1) {
+                page1.style.display = 'none';
+                page2.style.display = 'grid';
+                currentPage = 2;
+            } else {
+                page2.style.display = 'none';
+                page1.style.display = 'grid';
+                currentPage = 1;
+            }
+        }
+    </script>
+</body>
+</html>
